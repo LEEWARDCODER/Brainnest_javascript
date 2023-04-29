@@ -46,7 +46,7 @@ function game() {
     const computerSelection = computerPlay();
     const playerSelection = getUserSelection();
     const report = playRound(playerSelection, computerSelection);
-    prompt(report);
+    alert(report);
 
     const res = report.split(" ")[1];
     if (res.includes("win") ) humanScore++;
