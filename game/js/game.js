@@ -47,7 +47,7 @@ function game() {
     const playerSelection = getUserSelection();
     const report = playRound(playerSelection, computerSelection);
     alert(report);
-    console(report);
+    console.log(report);
     const res = report.split(" ")[1];
     if (res.includes("win") ) humanScore++;
     else if (res.includes("lose")) humanScore--;
