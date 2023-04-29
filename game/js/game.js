@@ -5,7 +5,7 @@ function game() {
 
   for (let i = 0; i < 5; i++) {
     const computerSelection = computerPlay();
-    const playerSelection = getUserInput();
+    const playerSelection = getUserSelection();
     const report = playRound(playerSelection, computerSelection);
     console.log(report);
 
@@ -19,7 +19,7 @@ function game() {
   console.log(`winner is ${endWinner} `);
 }
 
-function getUserInput() {
+function getUserSelection() {
   let playerSelection;
   do {
     const input = prompt(
