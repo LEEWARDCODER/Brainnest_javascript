@@ -63,7 +63,7 @@ function computerPlay() {
   let result;
 
   if (randomNumber >= 0 && randomNumber < 1) result = "Rock";
-  else if (randomNumber >= 0 && randomNumber < 2) result = "Paper";
+  else if (randomNumber >= 1 && randomNumber < 2) result = "Paper";
   else if (randomNumber >= 2 && randomNumber < 3) result = "Scissors";
   else throw exception("Random number must be between 0 and 3");
 
