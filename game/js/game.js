@@ -39,23 +39,23 @@ function getUserInput() {
 }
 
 function game() {
-  let count = 0;
+  let humanScore = 0;
   let endWinner = "Nobody (draw)";
 
   for (let i = 0; i < 5; i++) {
     const computerSelection = computerPlay();
     const playerSelection = getUserSelection();
     const report = playRound(playerSelection, computerSelection);
-    console.log(report);
+    prompt(report);
 
     const res = report.split(" ")[1];
-    if (res.includes("win") ) count++;
-    else if (res.includes("lose")) count--;
+    if (res.includes("win") ) humanScore++;
+    else if (res.includes("lose")) humanScore--;
   }
 
-  if (count > 0) endWinner = "You";
-  else if (count < 0) endWinner = "Computer";
-  console.log(`winner is ${endWinner} `);
+  if (humanScore > 0) endWinner = "You";
+  else if (humanScore < 0) endWinner = "Computer";
+  console.log(`winner is ${endWinner}  core diffenrence is ${humanScore}`);
 }
 
 
