@@ -23,12 +23,12 @@ function getUserInput() {
   let playerSelection;
   do {
     const input = prompt(
-      "Input your choice from either Rock Paper and Scissor",
+     "Input your choice from either Rock Paper and Scissor for 5 times, invalid inputs will be ignored",
       ""
     );
     if (input === "" || input === null) continue;
 
-    playerSelection = input.toLocaleLowerCase();
+    playerSelection = input.toLocaleLowerCase().trim();;
     playerSelection = playerSelection.replace(
       playerSelection[0],
       playerSelection[0].toUpperCase()
